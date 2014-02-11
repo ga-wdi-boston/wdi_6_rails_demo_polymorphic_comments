@@ -1,6 +1,8 @@
 PolyDemo::Application.routes.draw do
 
-  resources :ducks
+  resources :ducks do
+    resources :comments, defaults: {commentable: 'duck'}
+  end
 
   resources :computers do
     resources :comments, defaults: {commentable: 'computer'}
