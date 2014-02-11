@@ -1,0 +1,33 @@
+<h1>Listing ducks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Color</th>
+      <th>Sound</th>
+      <th>Backback</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ducks.each do |duck| %>
+      <tr>
+        <td><%= duck.name %></td>
+        <td><%= duck.color %></td>
+        <td><%= duck.sound %></td>
+        <td><%= duck.backback %></td>
+        <td><%= link_to 'Show', duck %></td>
+        <td><%= link_to 'Edit', edit_duck_path(duck) %></td>
+        <td><%= link_to 'Destroy', duck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Duck', new_duck_path %>
