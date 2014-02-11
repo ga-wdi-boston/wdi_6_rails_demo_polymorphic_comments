@@ -1,4 +1,6 @@
 PolyDemo::Application.routes.draw do
+  resources :comments
+
   resources :cars
 
   resources :computers
