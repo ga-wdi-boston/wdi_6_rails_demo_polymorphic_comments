@@ -1,4 +1,6 @@
 PolyDemo::Application.routes.draw do
+  resources :cars
+
   resources :computers
 
   # The priority is based upon order of creation: first created -> highest priority.
